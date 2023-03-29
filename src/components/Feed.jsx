@@ -1,7 +1,12 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
 export default function Feed() {
   return (
-    <div>Feed</div>
+    <section id="feed">
+      <div className="container">
+        <Sidebar/>
+      </div>
+    </section>
   )
 }
