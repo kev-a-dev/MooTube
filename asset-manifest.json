@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/MooTube/static/css/main.41b5d376.css",
-    "main.js": "/MooTube/static/js/main.bb10aba1.js",
+    "main.js": "/MooTube/static/js/main.c5858bb2.js",
     "static/media/cow.png": "/MooTube/static/media/cow.bea6c76c61590bb544f1.png",
     "index.html": "/MooTube/index.html",
     "main.41b5d376.css.map": "/MooTube/static/css/main.41b5d376.css.map",
-    "main.bb10aba1.js.map": "/MooTube/static/js/main.bb10aba1.js.map"
+    "main.c5858bb2.js.map": "/MooTube/static/js/main.c5858bb2.js.map"
   },
   "entrypoints": [
     "static/css/main.41b5d376.css",
-    "static/js/main.bb10aba1.js"
+    "static/js/main.c5858bb2.js"
   ]
 }
