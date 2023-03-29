@@ -2,6 +2,8 @@ import home from '../assets/home.png'
 import barn from '../assets/barn.png'
 import moo from '../assets/moo.png'
 import meat from '../assets/meat.png'
+import kobe from '../assets/kobe.png'
+import wagyu from '../assets/wagyu.png'
 import sausage from '../assets/sausage.png'
 import hamburger from '../assets/hamburger.png'
 import butter from '../assets/butter.png'
@@ -18,6 +20,8 @@ const categories = [
     {icon: home, name: 'New'},
     {icon: moo, name: 'Cow'},
     {icon: meat, name: 'Steak'},
+    {icon: kobe, name: 'Kobe Beef'},
+    {icon: wagyu, name: 'Wagyu Beef'},
     {icon: sausage, name: 'Beef'},
     {icon: hamburger, name: 'Burger'},
     {icon: barn, name: 'Farm'},

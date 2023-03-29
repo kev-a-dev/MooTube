@@ -9,7 +9,7 @@ function App() {
     <>
     <Navbar/>
     <Routes>
-      <Route path='/' element={<Feed/>}/>
+      <Route exact path='/' element={<Feed/>}/>
     </Routes>
     </>
   );

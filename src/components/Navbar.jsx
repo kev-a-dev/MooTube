@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="container">
 
             <div className="title-container">
-                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"></i>
               <Link to='/' className='link'>
                 <img src={cow} alt="" />
                 <h1 className="mootube">MooTube</h1>
@@ -19,7 +19,7 @@ export default function Navbar() {
             </div>
 
             <div className="searchbar-container">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
                 <input type="text" className="searchbar" placeholder='Search' />
             </div>
 

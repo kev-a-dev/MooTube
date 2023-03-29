@@ -1,8 +1,12 @@
 #navbar .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: pink;
+    background-color: paleturquoise;
 }
 
 /* ---------- TITLE ---------- */
@@ -18,20 +22,21 @@
     display: flex;
     align-items: center;
     margin: 10px 0;
+    margin-right: 30px;
 }
 
 #navbar .fa-solid.fa-bars {
-    margin: 0 20px;
+    margin: 0 30px 0 34px;
     font-size: 24px;
 }
 
 #navbar img {
-    width: 40px;
+    width: 30px;
     margin-right: 10px;
 }
 
 #navbar .mootube {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 /* ---------- SEARCH ---------- */
@@ -67,7 +72,7 @@
 #navbar .user {
     color: white;
     background-color: palevioletred;
-    margin: 0 20px;
+    margin: 0 30px;
     padding: 0 10px;
     border-radius: 10px;
 }
