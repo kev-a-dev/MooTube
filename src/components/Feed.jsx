@@ -6,18 +6,21 @@ import Sidebar from './Sidebar'
 
 export default function Feed() {
 
+  const [category, setCategory] = useState('cat')
   const [videos, setVideos] = useState([])
 
+  
   useEffect(() => {
-
+    
     const options = {
       method: 'GET',
       url: 'https://youtube-v31.p.rapidapi.com/search',
       params: {
-        relatedToVideoId: '7ghhRHRP6t4',
-        part: 'id,snippet',
-        type: 'video',
-        maxResults: '50'
+        q: category,
+        part: 'snippet,id',
+        regionCode: 'US',
+        maxResults: '50',
+        order: 'date'
       },
       headers: {
         'X-RapidAPI-Key': '583627f704msh19c07864199cf13p1b7dadjsnc2e1d0cc8354',
@@ -27,11 +30,12 @@ export default function Feed() {
     
     axios.request(options).then(function (response) {
       setVideos(response.data.items)
+      console.log(response)
     });
-
+    
   }, []);
-
-  console.log(videos)
+  
+  // console.log(videos)
 
   return (
     <section id="feed">

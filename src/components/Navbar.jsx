@@ -4,6 +4,7 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 import cow from '../assets/cow.png'
+import Feed from './Feed';
 
 export default function Navbar() {
   return (
