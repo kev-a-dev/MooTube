@@ -1,14 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Sidebar.css';
 
 import { categories } from '../utils/data';
 
 export default function Sidebar({setCategory}) {
+  const [active, setActive] = useState(null);
 
   const handleSetCategory = (event) => {
-    document.querySelector('.category').classList.toggle('active');
-    setCategory(event.target.textContent);
-    
+    const category = event.target.textContent;
+    setCategory(category);
+    setActive(category);
   }
 
   return (
@@ -16,7 +17,7 @@ export default function Sidebar({setCategory}) {
       <div className="container">
         {categories.map((category, index) => (
           <div 
-            className="category" 
+            className={`category ${category.name === active ? 'active' : ''}`} 
             key={index}
             onClick={handleSetCategory}  
           >

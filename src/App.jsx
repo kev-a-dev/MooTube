@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Feed from './components/Feed';
-import VideoPage from './components/VideoPage';
+import Watch from './components/Watch';
+import SearchResults from './components/SearchResults';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/MooTube' element={<Feed/>}/>
-        <Route path='/VideoPage' element={<VideoPage/>}/>
+        <Route path='/Watch/:id' element={<Watch/>}/>
+        <Route path='/SearchResults' element={<SearchResults/>}/>
       </Routes>
     </BrowserRouter>
   );

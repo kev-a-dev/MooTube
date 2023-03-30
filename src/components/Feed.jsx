@@ -35,6 +35,8 @@ export default function Feed() {
     
   }, [category]);
 
+  console.log(videos)
+
   return (
     <section id="feed">
       <div className="feed-container">
@@ -48,7 +50,10 @@ export default function Feed() {
 
           <div className="videos-container">
             {videos.map((video, index) => (
-              <Link to='/VideoPage' className='link' key={index}>
+              <Link to={`/Watch/${video.id.videoId}`} 
+                className='link' 
+                key={index}
+              >
                 <div className='video'>
                   <img src={video.snippet.thumbnails.high.url} alt="" className="video-img" />
                   <h3 className="title">{video.snippet.title.slice(0,60)}</h3>

@@ -53,7 +53,8 @@
     height: 40px;
     border-radius: 10px;
     padding-left: 34px;
-    border: 1px solid gray;
+    border: none;
+    box-shadow: 0 0 2px gray;
     font-size: 16px;
 }
 
