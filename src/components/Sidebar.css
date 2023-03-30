@@ -1,9 +1,10 @@
 #sidebar {
     position: fixed;
-    top: 80px;
+    top: 56px;
     left: 0;
-    background-color: rgba(255, 192, 203, 0.5);
+    box-shadow: 1px 0 0 lightgray;
     margin-right: 50px;
+    height: 100%;
 }
 
 #sidebar .container {
@@ -27,5 +28,10 @@
 
 #sidebar .category:hover {
     background-color: lightgray;
+    border-radius: 10px;
+}
+
+#sidebar .category.active {
+    background-color: dimgray;
     border-radius: 10px;
 }

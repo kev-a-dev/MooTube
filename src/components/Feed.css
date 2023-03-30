@@ -1,3 +1,8 @@
+#feed .link {
+    text-decoration: none;
+    color: black;
+}
+
 #feed .feed-container {
     display: flex;
     margin-top: 80px;
@@ -11,6 +16,10 @@
 
 #feed .category-wrapper .category {
     margin-right: 10px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
 }
 
 #feed .videos-container {

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Feed.css';
 import axios from 'axios';
 
@@ -6,9 +8,8 @@ import Sidebar from './Sidebar'
 
 export default function Feed() {
 
-  const [category, setCategory] = useState('cat')
+  const [category, setCategory] = useState('Cow')
   const [videos, setVideos] = useState([])
-
   
   useEffect(() => {
     
@@ -30,31 +31,30 @@ export default function Feed() {
     
     axios.request(options).then(function (response) {
       setVideos(response.data.items)
-      console.log(response)
     });
     
-  }, []);
-  
-  // console.log(videos)
+  }, [category]);
 
   return (
     <section id="feed">
       <div className="feed-container">
-        <Sidebar/>
+        <Sidebar category={category} setCategory={setCategory}/>
 
         <div className="feed-wrapper">
           <div className="category-wrapper">
-            <h1 className="category">Category</h1>
+            <h1 className="category">{category}</h1>
             <h1 className="video-title">Videos</h1>
           </div>
 
           <div className="videos-container">
             {videos.map((video, index) => (
-              <div key={index} className='video'>
-                <img src={video.snippet.thumbnails.high.url} alt="" className="video-img" />
-                <h3 className="title">{video.snippet.title.slice(0,60)}</h3>
-                <h3 className="channel">{video.snippet.channelTitle}</h3>
-              </div>
+              <Link to='/VideoPage' className='link' key={index}>
+                <div className='video'>
+                  <img src={video.snippet.thumbnails.high.url} alt="" className="video-img" />
+                  <h3 className="title">{video.snippet.title.slice(0,60)}</h3>
+                  <h3 className="channel">{video.snippet.channelTitle}</h3>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

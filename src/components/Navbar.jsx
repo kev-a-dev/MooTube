@@ -4,7 +4,6 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 import cow from '../assets/cow.png'
-import Feed from './Feed';
 
 export default function Navbar() {
   return (
@@ -13,7 +12,7 @@ export default function Navbar() {
 
             <div className="title-container">
                 <i className="fa-solid fa-bars"></i>
-              <Link to='/' className='link'>
+              <Link to='/MooTube' className='link'>
                 <img src={cow} alt="" />
                 <h1 className="mootube">MooTube</h1>
               </Link>
