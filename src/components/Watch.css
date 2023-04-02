@@ -1,3 +1,56 @@
-#videopage {
-    margin-top: 100px;
+#watch {
+    margin-top: 70px;
+}
+
+#watch .container {
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+}
+/* ---------- VIDEO ---------- */
+ #watch .react-player-wrapper {
+    max-width: 1280px;
+    width: 100%;
+    max-height: 720px;
+    height: 100vh;
+    margin: 0 30px;
+    background-color: aquamarine;
+}
+
+#watch .react-player {
+
+} 
+
+/* ---------- SUGGESTIONS ---------- */
+#watch .videos-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+#watch .link {
+    text-decoration: none;
+    color: black;
+}
+
+#watch .video{
+    max-width: 320px;
+    margin-bottom: 20px;
+}
+
+#watch .video img {
+    width: 320px;
+    height: 178px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#watch .title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#watch .channel {
+    font-size: 16px;
+    font-weight: 400;
 }

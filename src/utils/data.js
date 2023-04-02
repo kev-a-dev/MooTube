@@ -1,4 +1,4 @@
-import home from '../assets/home.png'
+import fire from '../assets/fire.png'
 import barn from '../assets/barn.png'
 import moo from '../assets/moo.png'
 import meat from '../assets/meat.png'
@@ -17,7 +17,7 @@ import lasso from '../assets/lasso.png'
 
 
 const categories = [
-    {icon: home, name: 'New'},
+    {icon: fire, name: 'Trending'},
     {icon: moo, name: 'Cow'},
     {icon: meat, name: 'Steak'},
     {icon: kobe, name: 'Kobe Beef'},

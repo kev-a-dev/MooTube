@@ -30,16 +30,27 @@
     margin-right: 30px;
     margin-left: 320px;
 }
-
+/* ---------- VIDEO ---------- */
 #feed .video {
     max-width: 320px;
 }
 
-#feed .video img {
+#feed .video-img {
     width: 320px;
-    height: 178px;
+    height: 180px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+#feed .video-info-wrapper {
+    display: flex;
+}
+
+#feed .avatar {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 #feed .title {
@@ -48,7 +59,24 @@
 }
 
 #feed .channel {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: dimgray;
+}
+
+#feed .stats-wrapper {
+    display: flex;
+    font-weight: 400;
+    color: dimgray;
+}
+
+#feed .views {
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#feed .date {
+    font-weight: normal;
+    font-size: 14px;
 }

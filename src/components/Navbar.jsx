@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css';
 
 import { Link } from 'react-router-dom';
@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import cow from '../assets/cow.png'
 
 export default function Navbar() {
+
+  const [query, setQuery] = useState('')
+
   return (
     <section id="navbar">
         <div className="container">
@@ -24,9 +27,11 @@ export default function Navbar() {
                   type="text" 
                   className="searchbar" 
                   placeholder='Search' 
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
                   onKeyDown={(event) => {
                     if (event.key === "Enter"){
-                      window.location.href = '/SearchResults'
+                      window.location.href = `/SearchResults?q=${query}`
                     }
                   }}
                 />
