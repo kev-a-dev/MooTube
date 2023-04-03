@@ -5,21 +5,76 @@
 #watch .container {
     display: flex;
     justify-content: center;
-    background-color: pink;
 }
 /* ---------- VIDEO ---------- */
- #watch .react-player-wrapper {
+ #watch .react-player-container {
     max-width: 1280px;
     width: 100%;
     max-height: 720px;
     height: 100vh;
     margin: 0 30px;
-    background-color: aquamarine;
 }
 
-#watch .react-player {
-
+#watch .react-player-container .title {
+    font-size: 20px;
+    margin: 10px 0;
 } 
+
+#watch .react-player-container .avatar-channel-wrapper {
+    display: flex;
+} 
+
+#watch .react-player-container .avatar {
+    margin-right: 10px;
+} 
+
+#watch .react-player-container .channel {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+} 
+
+#watch .react-player-container .subscribers {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+} 
+/* ---------- DESCRIPTION ---------- */
+#watch .description-container {
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    height: 94px;
+    overflow: hidden;
+}
+
+#watch .description-container:hover {
+    background-color: rgba(211, 211, 211, 0.75);
+    cursor: pointer;
+
+}
+
+#watch .description-container.open {
+    height: auto;
+}
+
+#watch .react-player-container .view-date-wrapper {
+    display: flex;
+}
+
+#watch .react-player-container .views, 
+#watch .react-player-container .date {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#watch .react-player-container .description {
+    font-weight: normal;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* ---------- SUGGESTIONS ---------- */
 #watch .videos-container {
@@ -33,16 +88,27 @@
     color: black;
 }
 
-#watch .video{
+#watch .video {
     max-width: 320px;
     margin-bottom: 20px;
 }
 
-#watch .video img {
+#watch .video-img {
     width: 320px;
-    height: 178px;
+    height: 180px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+#watch .video-info-wrapper {
+    display: flex;
+}
+
+#watch .avatar {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 #watch .title {
@@ -51,6 +117,24 @@
 }
 
 #watch .channel {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
+    color: dimgray;
+}
+
+#watch .stats-wrapper {
+    display: flex;
+    font-weight: 400;
+    color: dimgray;
+}
+
+#watch .views {
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#watch .date {
+    font-weight: normal;
+    font-size: 14px;
 }

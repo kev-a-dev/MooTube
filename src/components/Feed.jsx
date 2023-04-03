@@ -37,7 +37,6 @@ export default function Feed() {
 
     axios.request(options).then(function (response) {
       setVideos(response.data.contents);
-      console.log(response.data.contents[0].video)
     })
     
   }, [category]);
@@ -55,8 +54,7 @@ export default function Feed() {
 
           <div className="videos-container">
             {videos.map((video, index) => (
-              // <Link to={`/Watch/${video.video}`} 
-              <Link to={`/Watch/${video.videoId}`} 
+              <Link to={`/Watch/${video.video.videoId}`} 
                 className='link' 
                 key={index}
               >
@@ -77,6 +75,7 @@ export default function Feed() {
               </Link>
             ))}
           </div>
+
         </div>
       </div>
     </section>
