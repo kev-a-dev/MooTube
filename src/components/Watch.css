@@ -22,7 +22,12 @@
 
 #watch .react-player-container .avatar-channel-wrapper {
     display: flex;
+    justify-content: space-between;
 } 
+
+#watch .avatar-wrapper {
+    display: flex;
+}
 
 #watch .react-player-container .avatar {
     margin-right: 10px;
@@ -39,28 +44,10 @@
     font-weight: 400;
     color: black;
 } 
-/* ---------- DESCRIPTION ---------- */
-#watch .description-container {
-    background-color: rgba(211, 211, 211, 0.5);
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
-    height: 94px;
-    overflow: hidden;
-}
-
-#watch .description-container:hover {
-    background-color: rgba(211, 211, 211, 0.75);
-    cursor: pointer;
-
-}
-
-#watch .description-container.open {
-    height: auto;
-}
 
 #watch .react-player-container .view-date-wrapper {
     display: flex;
+    flex-direction: column;
 }
 
 #watch .react-player-container .views, 
@@ -69,11 +56,65 @@
     font-weight: 500;
 }
 
+/* ---------- DESCRIPTION ---------- */
+#watch .description-container {
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#watch .description-container:hover {
+    background-color: rgba(211, 211, 211, 0.75);
+    cursor: pointer;
+
+}
+
+#watch .description.open {
+    display: block;
+    height: auto;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+#watch .description:not(.open) {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
 #watch .react-player-container .description {
     font-weight: normal;
     white-space: pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* ---------- COMMENTS ---------- */
+#watch .comment {
+    display: flex;
+}
+
+#watch .comment .avatar {
+    width: 24px;
+    height: auto;
+}
+
+#watch .comment .title-date-wrapper {
+    display: flex;
+}
+
+#watch .comment .title {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    margin-right: 10px;
+}
+
+#watch .comment .date {
+    font-size: 13px;
+    color: gray;
+    font-weight: normal;
 }
 
 /* ---------- SUGGESTIONS ---------- */

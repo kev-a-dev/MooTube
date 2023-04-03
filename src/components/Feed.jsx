@@ -54,9 +54,10 @@ export default function Feed() {
 
           <div className="videos-container">
             {videos.map((video, index) => (
-              <Link to={`/Watch/${video.video.videoId}`} 
-                className='link' 
-                key={index}
+              <Link to={{ pathname: `/Watch/${video.video.videoId}`, 
+                    state: { publishedTimeText: video.video.publishedTimeText } }} 
+                    className='link' 
+                    key={index}
               >
                 <div className='video'>
                   <img src={video.video.thumbnails[0].url} alt="" className="video-img" />
