@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
 import './Navbar.css';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import cow from '../assets/cow.png'
 
 export default function Navbar() {
 
   const [query, setQuery] = useState('')
+  const navigate = useNavigate();
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      navigate(`/SearchResults?q=${query}`);
+    }
+  }
 
   return (
     <section id="navbar">
@@ -29,11 +36,7 @@ export default function Navbar() {
                   placeholder='Search' 
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter"){
-                      window.location.href = `/SearchResults?q=${query}`
-                    }
-                  }}
+                  onKeyDown={handleKeyDown}
                 />
             </div>
 

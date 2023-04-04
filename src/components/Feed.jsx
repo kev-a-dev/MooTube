@@ -51,7 +51,7 @@ export default function Feed() {
         part: 'snippet,id',
         regionCode: 'US',
         maxResults: '50',
-        order: 'date'
+        order: 'relevance'
       },
       headers: {
         'X-RapidAPI-Key': '583627f704msh19c07864199cf13p1b7dadjsnc2e1d0cc8354',

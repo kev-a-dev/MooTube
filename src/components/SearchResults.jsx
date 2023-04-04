@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
-import Sidebar from './Sidebar'
 
 import './SearchResults.css';
 
@@ -47,7 +46,7 @@ export default function SearchResults() {
         part: 'snippet,id',
         regionCode: 'US',
         maxResults: '50',
-        order: 'date'
+        order: 'relevance'
       },
       headers: {
         'X-RapidAPI-Key': '583627f704msh19c07864199cf13p1b7dadjsnc2e1d0cc8354',
