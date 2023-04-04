@@ -1,7 +1,7 @@
 
 # MooTube (in progress)
 
-YouTube application I built by fetching date from YouTube's API. MooTube is a simplified version of YouTube with video searching, suggested videos, video playing, and readable comments. It is also cow themed.
+I rebuilt a simpler version of YouTube by fetching data from its API. It includes video searching, suggested videos, video playing, and readable comments. It is also cow themed.
 
 
 Link: https://kev-a-dev.github.io/MooTube/
