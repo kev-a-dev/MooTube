@@ -71,11 +71,11 @@ export default function Feed() {
         {isSidebarOpen &&<Sidebar category={category} setCategory={setCategory}/>}
 
         <div className="feed-wrapper">
+
           <div className="category-wrapper">
             <h1 className="category">{category}</h1>
             <h1 className="video-title">Videos</h1>
           </div>
-
           <div className="videos-container">
             {videos.map((video, index) => (
               video && 

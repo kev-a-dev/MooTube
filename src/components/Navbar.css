@@ -89,3 +89,45 @@
     padding: 0 10px;
     border-radius: 10px;
 }
+
+#navbar .user:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+#navbar .user:active {
+    transform: scale(1);
+    transition: 20ms;
+}
+
+
+@media all and (max-width: 700px) {
+    #navbar .fa-solid.fa-bars {
+        display: none;
+    }
+    
+    #navbar .title-container {
+        margin: 10px;
+    }
+
+    #navbar .user {
+        margin: 0 10px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #navbar .container{
+        height: 56px;
+    }
+    #navbar .title-container {
+        margin: 10px;
+    }
+
+    #navbar .title-container img {
+        margin: 0;
+    }
+
+    #navbar .mootube {
+        display: none;
+    }
+}

@@ -46,7 +46,7 @@ export default function Navbar() {
                 />
             </div>
 
-            <h1 className="user">G</h1>
+            <h1 className="user" title='This is just for show' >G</h1>
 
         </div>
     </section>
