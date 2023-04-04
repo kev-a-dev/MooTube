@@ -6,6 +6,7 @@
 #feed .feed-container {
     display: flex;
     margin-top: 70px;
+    margin-bottom: 20px;
 }
 
 #feed .category-wrapper {

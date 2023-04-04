@@ -64,8 +64,6 @@ export default function Feed() {
     })
   }, [category]);
 
-  console.log(videos)
-
   return (
     <section id="feed">
       <div className="feed-container">
