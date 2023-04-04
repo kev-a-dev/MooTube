@@ -6,7 +6,7 @@
 
 #search-results .query {
     font-weight: 500;
-    margin: 20px 0;
+    margin: 20px;
 }
 
 #search-results .query span{
@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 20px;
 }
 
 #search-results .video {
@@ -95,4 +96,27 @@
 #search-results .date {
     font-weight: normal;
     font-size: 14px;
+}
+
+@media all and (max-width: 700px) {
+    #search-results .link {
+        flex-direction: column;
+        width: 360px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #search-results .link {
+        flex-direction: column;
+        width: 300px;
+    }
+
+    #search-results .video {
+        width: 300px;
+    }
+
+    #search-results .video-img {
+        width: 300px;
+        height: 168px;
+    }
 }
