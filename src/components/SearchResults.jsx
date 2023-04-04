@@ -59,8 +59,6 @@ export default function SearchResults() {
     })
   }, [query])
 
-  console.log(videos)
-
   return (
     <section id="search-results">
       <div className="container">

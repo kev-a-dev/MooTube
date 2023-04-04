@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import AppContext from './AppContext';
 import { Link } from 'react-router-dom';
 
 import './Feed.css';
@@ -7,9 +8,9 @@ import Sidebar from './Sidebar'
 
 
 export default function Feed() {
-  
-  const [category, setCategory] = useState('Trending')
-  const [videos, setVideos] = useState([])
+  const { isSidebarOpen } = useContext(AppContext);
+  const [category, setCategory] = useState('Trending');
+  const [videos, setVideos] = useState([]);
 
   // FORMAT TIME
   function formatTime(dateString) {
@@ -67,7 +68,7 @@ export default function Feed() {
   return (
     <section id="feed">
       <div className="feed-container">
-        <Sidebar category={category} setCategory={setCategory}/>
+        {isSidebarOpen &&<Sidebar category={category} setCategory={setCategory}/>}
 
         <div className="feed-wrapper">
           <div className="category-wrapper">

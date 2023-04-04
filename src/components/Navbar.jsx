@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './Navbar.css';
-
+import cow from '../assets/cow.png'
+import AppContext from './AppContext';
 import { Link, useNavigate } from 'react-router-dom';
 
-import cow from '../assets/cow.png'
 
 export default function Navbar() {
-
+  const {isSidebarOpen, setIsSidebarOpen} = useContext(AppContext)
   const [query, setQuery] = useState('')
   const navigate = useNavigate();
 
@@ -16,12 +16,18 @@ export default function Navbar() {
     }
   }
 
+  const handleCloseSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  }
+
   return (
     <section id="navbar">
         <div className="container">
 
             <div className="title-container">
-                <i className="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"
+                   onClick={handleCloseSidebar}
+                ></i>
               <Link to='/MooTube' className='link'>
                 <img src={cow} alt="" />
                 <h1 className="mootube">MooTube</h1>
