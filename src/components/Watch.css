@@ -64,12 +64,6 @@
     margin-top: 10px;
 }
 
-#watch .description-container:hover {
-    background-color: rgba(211, 211, 211, 0.75);
-    cursor: pointer;
-
-}
-
 #watch .description.open {
     display: block;
     height: auto;
@@ -83,6 +77,21 @@
     -webkit-box-orient: vertical;
 }
 
+#watch .description-container .des-toggle {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 200ms;
+}
+
+#watch .description-container .des-toggle:hover {
+    background-color: rgba(211, 211, 211, 0.75);
+    padding: 4px 10px;
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+
 #watch .react-player-container .description {
     font-weight: normal;
     white-space: pre-wrap;
@@ -91,18 +100,33 @@
 }
 
 /* ---------- COMMENTS ---------- */
+#watch .comments-container {
+    margin-bottom: 50px;
+}
+#watch .recent {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 20px;
+}
 #watch .comment {
     display: flex;
+    margin: 20px 0;
 }
 
 #watch .comment .avatar {
-    width: 24px;
+    width: 40px;
     height: auto;
+}
+
+#watch .title-date-content-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 #watch .comment .title-date-wrapper {
     display: flex;
 }
+
 
 #watch .comment .title {
     font-size: 13px;
@@ -115,6 +139,22 @@
     font-size: 13px;
     color: gray;
     font-weight: normal;
+}
+
+#watch .comment .content {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#watch .comment .votes {
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 6px;
+}
+
+#watch .fa-regular.fa-heart {
+    font-size: 14px;
+    margin-right: 10px;
 }
 
 /* ---------- SUGGESTIONS ---------- */
