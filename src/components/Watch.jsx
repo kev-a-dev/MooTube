@@ -5,7 +5,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import ReactPlayer from 'react-player';
-import moo from '../assets/moo.png';
 
 export default function Watch() {
 
@@ -123,12 +122,13 @@ export default function Watch() {
 
   }, [id]);
 
-  if (comments === null) {
+  if (comments === null || videos === null || videoDetail === null) {
     return <div>Loading...</div>;
   }
   
   return (
     <div>
+        
         <section id="watch">
             <div className="container">
               {/* VIDEO */}
@@ -180,7 +180,7 @@ export default function Watch() {
 
                 {/* COMMENTS */}
                 <div className="comments-container">
-                  <h3 className="recent">Recent Comments</h3>
+                  <h3 className="recent">Recent Comments ({comments.length})</h3>
 
                   {comments.map((comment, index) => (
                     comment.snippet &&
