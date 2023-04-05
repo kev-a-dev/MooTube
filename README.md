@@ -1,5 +1,5 @@
 
-# MooTube (in progress)
+# MooTube 
 
 I rebuilt a simpler version of YouTube by fetching data from its API. It includes video searching, suggested videos, video playing, and readable comments. It is also cow themed.
 
