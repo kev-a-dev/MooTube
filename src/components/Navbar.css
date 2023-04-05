@@ -1,8 +1,14 @@
 #navbar .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: pink;
+    background-color: white;
+    box-shadow: 0 1px 0 lightgray;
+    z-index: 2;
 }
 
 /* ---------- TITLE ---------- */
@@ -12,26 +18,39 @@
     align-items: center;
     text-decoration: none;
     color: black;
+    
 }
 
 #navbar .title-container {
     display: flex;
     align-items: center;
     margin: 10px 0;
+    margin-right: 30px;
 }
 
 #navbar .fa-solid.fa-bars {
-    margin: 0 20px;
+    margin: 0 30px 0 34px;
     font-size: 24px;
+    cursor: pointer;
+}
+
+#navbar .fa-solid.fa-bars:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+#navbar .fa-solid.fa-bars:active {
+    transform: scale(1);
+    transition: 20ms;
 }
 
 #navbar img {
-    width: 40px;
-    margin-right: 10px;
+    width: 30px;
+    margin: 0 10px;
 }
 
 #navbar .mootube {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 /* ---------- SEARCH ---------- */
@@ -47,7 +66,8 @@
     height: 40px;
     border-radius: 10px;
     padding-left: 34px;
-    border: 1px solid gray;
+    border: none;
+    box-shadow: 0 0 2px gray;
     font-size: 16px;
 }
 
@@ -66,8 +86,50 @@
 
 #navbar .user {
     color: white;
-    background-color: palevioletred;
-    margin: 0 20px;
+    background-color: gray;
+    margin: 0 30px;
     padding: 0 10px;
     border-radius: 10px;
+}
+
+#navbar .user:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+#navbar .user:active {
+    transform: scale(1);
+    transition: 20ms;
+}
+
+
+@media all and (max-width: 700px) {
+    #navbar .fa-solid.fa-bars {
+        display: none;
+    }
+    
+    #navbar .title-container {
+        margin: 10px;
+    }
+
+    #navbar .user {
+        margin: 0 10px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #navbar .container{
+        height: 56px;
+    }
+    #navbar .title-container {
+        margin: 10px;
+    }
+
+    #navbar .title-container img {
+        margin: 0;
+    }
+
+    #navbar .mootube {
+        display: none;
+    }
 }

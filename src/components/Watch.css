@@ -1,0 +1,272 @@
+#watch {
+    margin-top: 70px;
+}
+
+#watch .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+/* ---------- VIDEO ---------- */
+ #watch .react-player-container {
+    max-width: 1280px;
+    width: 100%;
+    height: 720px;
+    margin: 0 30px;
+}
+
+#watch .react-player-container .title {
+    font-size: 20px;
+    margin: 10px 0;
+} 
+
+#watch .react-player-container .avatar-channel-wrapper {
+    display: flex;
+    justify-content: space-between;
+} 
+
+#watch .avatar-wrapper {
+    display: flex;
+}
+
+#watch .react-player-container .avatar {
+    margin-right: 10px;
+} 
+
+#watch .react-player-container .channel {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+} 
+
+#watch .react-player-container .subscribers {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+} 
+
+#watch .react-player-container .view-date-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#watch .react-player-container .views, 
+#watch .react-player-container .date {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ---------- DESCRIPTION ---------- */
+#watch .description-container {
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#watch .description.open {
+    display: block;
+    height: auto;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+#watch .description:not(.open) {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+#watch .description-container .des-toggle {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 200ms;
+}
+
+#watch .description-container .des-toggle:hover {
+    background-color: rgba(211, 211, 211, 0.75);
+    padding: 4px 10px;
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+
+#watch .react-player-container .description {
+    font-weight: normal;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---------- COMMENTS ---------- */
+#watch .comments-container {
+    margin-bottom: 50px;
+}
+#watch .recent {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 20px;
+}
+#watch .comment {
+    display: flex;
+    margin: 20px 0;
+}
+
+#watch .comment .avatar {
+    width: 40px;
+    height: auto;
+}
+
+#watch .title-date-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#watch .comment .title-date-wrapper {
+    display: flex;
+}
+
+
+#watch .comment .title {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    margin-right: 10px;
+}
+
+#watch .comment .date {
+    font-size: 13px;
+    color: gray;
+    font-weight: normal;
+}
+
+#watch .comment .content {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#watch .comment .votes {
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 6px;
+}
+
+#watch .fa-regular.fa-heart {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* ---------- SUGGESTIONS ---------- */
+#watch .videos-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+#watch .link {
+    text-decoration: none;
+    color: black;
+}
+
+#watch .video {
+    max-width: 320px;
+    margin-bottom: 20px;
+}
+
+#watch .video-img {
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#watch .video-info-wrapper {
+    display: flex;
+}
+
+#watch .avatar {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#watch .title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#watch .channel {
+    font-size: 14px;
+    font-weight: 400;
+    color: dimgray;
+}
+
+#watch .stats-wrapper {
+    display: flex;
+    font-weight: 400;
+    color: dimgray;
+}
+
+#watch .views {
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#watch .date {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+@media all and (max-width: 1400px) {
+    #watch .react-player-container {
+        max-height: 600px;
+    }
+}
+
+
+@media all and (max-width: 1250px) {
+    #watch .react-player-container {
+        max-height: 500px;
+    }
+
+    #watch .videos-container {
+        display: none;
+    }
+}
+
+@media all and (max-width: 750px) {
+    #watch .react-player-container {
+        max-height: 400px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #watch .react-player-container {
+        max-height: 300px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #watch .react-player-container {
+        max-height: 250px;
+        margin: 0 10px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #watch .react-player-container {
+        max-height: 200px;
+    }
+}
+
+@media all and (max-width: 340px) {
+    #watch .react-player-container {
+        max-height: 200px;
+        margin: 0 2px;
+    }
+}
+
