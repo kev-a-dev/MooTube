@@ -5,8 +5,8 @@ import axios from 'axios';
 import './SearchResults.css';
 
 
-export default function SearchResults() {
-
+export default function SearchResults(props) {
+  const {setDisableBar} = props;
   const location = useLocation();
   const query = new URLSearchParams(location.search).get('q');
   const [videos, setVideos] = useState([]);
@@ -35,6 +35,12 @@ export default function SearchResults() {
       return `${yearsAgo} years ago`;
     }
   }
+
+  // DISABLE SIDEBAR BUTTON
+  useEffect(() => {
+    setDisableBar(true);
+    return () => setDisableBar(false);
+  }, [setDisableBar]);
 
   // FETCH SEARCH
   useEffect(() => {

@@ -5,7 +5,8 @@ import AppContext from './AppContext';
 import { Link, useNavigate } from 'react-router-dom';
 
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const {disableBar} = props;
   const {isSidebarOpen, setIsSidebarOpen} = useContext(AppContext)
   const [query, setQuery] = useState('')
   const navigate = useNavigate();
@@ -25,9 +26,9 @@ export default function Navbar() {
         <div className="container">
 
             <div className="title-container">
-                <i className="fa-solid fa-bars"
+                {disableBar === false ? <i className="fa-solid fa-bars"
                    onClick={handleCloseSidebar}
-                ></i>
+                ></i>: null}
               <Link to='/MooTube' className='link'>
                 <img src={cow} alt="" />
                 <h1 className="mootube">MooTube</h1>

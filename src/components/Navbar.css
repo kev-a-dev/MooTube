@@ -8,6 +8,7 @@
     align-items: center;
     background-color: white;
     box-shadow: 0 1px 0 lightgray;
+    z-index: 2;
 }
 
 /* ---------- TITLE ---------- */
@@ -45,7 +46,7 @@
 
 #navbar img {
     width: 30px;
-    margin: 0 10px 0 30px;
+    margin: 0 10px;
 }
 
 #navbar .mootube {
